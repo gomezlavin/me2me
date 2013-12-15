@@ -1,15 +1,8 @@
-
-// #main_bar{
-//     /*background-color: orange;*/
-//     height: 80px;
-//     margin-top: -8px;
-//     margin-left: -8px;
-//     margin-right: -8px;
-//     margin-bottom: 0px;
-// }
+// ****************************
+// LANDING PAGE CSS
+// ****************************
 
 #main_bar{
-    /*background-color: orange;*/
     height: 80px;
     margin-top: -8px;
     margin-left: 60px;
@@ -20,7 +13,6 @@
 #main_logo{
     float: left;
     margin-top: 15px;
-    /*background-color: red;*/
     height: 60px;
     width: 250px;
 }
@@ -38,44 +30,24 @@ span{
 #main_options{
     float: left;
     margin-top: 20px;
-    // background-color: purple;
     height: 45px;
     width: 500px;
     padding-top: 11px;
 }
-// #main_options{
-//     float: left;
-//     margin-top: 20px;
-//     // background-color: purple;
-//     height: 45px;
-//     width: 600px;
-//     padding-top: 11px;
-// }
+
 
 #main_options_list{
     text-decoration: none;
     list-style-type: none;
     height: 20px;
     width: 600px;
-    // background-color: blue;
     margin-left: 0px;
     padding-left: 0px;
     margin-bottom: 1px;
     font-family: arial;
     font-size: 15px;
 }
-// #main_options_list{
-//     text-decoration: none;
-//     list-style-type: none;
-//     height: 20px;
-//     width: 600px;
-//     /*background-color: blue;*/
-//     margin-left: 0px;
-//     padding-left: 0px;
-//     margin-bottom: 1px;
-//     font-family: arial;
-//     font-size: 15px;
-// }
+
 
 .main_options_li{
     display: inline;
@@ -91,29 +63,20 @@ span{
 
 #main_user{
     float: right;
-    // background-color: blue;
     height: 50px;
     width: 200px;
     margin-right: 20px;
 }
-// #main_user{
-//     float: right;
-//     /*background-color: blue;*/
-//     height: 50px;
-//     width: 200px;
-//     margin-right: 20px;
-// }
+
 
 #main_user_signin{
     float: left;
-    /*background-color: green;*/
     height: 40px;
     width: 100px;
 }
 
 #main_user_signup{
     float: right;
-    /*background-color: pink;*/
     height: 40px;
     width: 100px;
 }
@@ -134,7 +97,6 @@ span{
 }
 
 #main_message{
-    /*background-color: grey;*/
     height: 60px;
     margin-left: -8px;
     margin-right: -8px;
@@ -148,43 +110,6 @@ span{
     font-size: 30px;
     color:#4C4C58;
 }
-
-// #main_carrousel{
-//     background-color: white;
-//     margin-left: -8px;
-//     margin-right: -8px;
-//     height: 370px;
-//     box-shadow:4px 1px 15px 2px grey;
-// }
-
-// #main_carro_left{
-//     background-color: #bf491f;
-//     padding-top: 50px;
-//     // height: 370px;
-//     height: 320px;
-//     width: 425px;
-//     float: left;
-// }
-
-// #main_carro_center{
-//     background-color: #d95a2b;
-//     padding-top: 50px;
-//     // height: 370px;
-//     height: 320px;
-//     width: 426px;
-//     float: left;
-//     border-left: 2px solid white;
-// }
-
-// #main_carro_right{
-//     background-color: #f27c38;
-//     padding-top: 50px;
-//     // height: 370px;
-//     height: 320px;
-//     width: 425px;
-//     border-left: 2px solid white;
-//     float: left;
-// }
 
 #main_carrousel{
     background-color: white;
@@ -256,41 +181,12 @@ span{
 #p3{
     padding-left: 45px;
 }
-// .main_carro_top{
-//     width: 325px;
-//     height: 120px;
-//     padding-top: 40px;
-//     padding-left: 100px;
-// }
-
-// .main_carro_middle{
-//     width: 425px;
-//     height: 65px;
-//     color: white;
-//     text-align: center;
-//     font-size: 40px;
-//     font-family: arial;
-//     padding-top: 30px;
-// }
-
-// .main_carro_bottom{
-//     width: 280px;
-//     height: 85px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     color: white;
-//     font-family: arial;
-//     font-size: 17px;
-//     text-align: justify;
-// }
 
 img{
-    // box-shadow:1px 1px 5px 2px white;
     border-radius: 10px;
 }
 
 #main_signup{
-    /*background-color: black;*/
     margin-left: -8px;
     margin-right: -8px;
     margin-top: 10px;
@@ -300,7 +196,6 @@ img{
 }
 
 #main_signup_form{
-    /*background-color: orange;*/
     width: 400px;
     height: 50px;
     margin-left: auto;
@@ -328,12 +223,7 @@ img{
     background-color: #73221A;
 }
 
-/*#main_onetime{
-
-}*/
-
 #main_info{
-    /*background-color: grey;*/
     margin-left: -8px;
     margin-right: -8px;
     height: 19px;
@@ -344,7 +234,6 @@ img{
 #main_info_label_left{
     float: left;
     font-size: 15px;
-    /*margin-top: -8px;*/
     margin-left: 2px;
     color: grey;
 }
@@ -352,7 +241,6 @@ img{
 #main_info_label_right{
     float: right;
     font-size: 15px;
-    /*margin-top: -8px;*/
     margin-right: 2px;
     color: grey;
 }

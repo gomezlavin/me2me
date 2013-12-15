@@ -22,27 +22,28 @@ var current_user;
 //=================================================
 $(function() {
 
-  // Loading parameters
-  getCurrentUser();
+  // *******************************
+  // INITIALIZING APP FOR USER
+  // *******************************
+  start();
 
+  // *******************************
+  // MESSAGE-RELATED EVENTS
+  // *******************************
+
+  // Display the messages div block
   $("#switch1").on("click", function() {
     $("#msg_block").show();
+    $("#ltr_block").hide();
+    $("#quote_block").hide();
   });
 
-  $("#switch2").on("click", function() {
-    $("#msg_block").hide();
-  });
-
-  $("#switch3").on("click", function() {
-    $("#msg_block").hide();
-  });
-
+  // Show the form to create a new message
   $("#msg_new").on("click", function(event) {
     $("#msg_createmsg").show();
     $("#msg_showmsg").hide();
     $(".msg_message_label").text("Write a message or thought for your future self");
   });
-
 
   // Event where user creates a new message
   $("#msg_button").on("click", function(event) {
@@ -67,4 +68,33 @@ $(function() {
     searchMessages();
   });
 
+
+  // *******************************
+  // LETTER-RELATED EVENTS
+  // *******************************
+
+  // Display the letters div block
+  $("#switch2").on("click", function() {
+    $("#msg_block").hide();
+    $("#ltr_block").show();
+    $("#quote_block").hide();
+  });
+
+
+  // *******************************
+  // QUOTE-RELATED EVENTS
+  // *******************************
+
+  // Display the quotes div block
+  $("#switch3").on("click", function() {
+    $("#msg_block").hide();
+    $("#ltr_block").hide();
+    $("#quote_block").show();
+  });
+
 });
+
+
+
+
+
