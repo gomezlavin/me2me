@@ -1,0 +1,106 @@
+
+<body id="sign_body">
+  <div id="sign_navbar">
+    <div id="sign_logo">
+      <a href="/" <label id="sign_logo_label">me-<span>2</span>-me</label></a>
+    </div>
+    <div id="switch">
+      <div id="switch1">
+        Self<br/>Message
+      </div>
+      <div id="switch2">
+        Time<br/>Capsule
+      </div>
+      <div id="switch3">
+        Inspirational<br/>Quotes
+      </div>
+    </div>
+    <div id="account_settings">
+      <label id="account_name">
+        <%="#{@user.fname} #{@user.lname} | "%>
+      </label>
+      <label>
+        <% if @current_user %>
+          <%= link_to "SignOut", logout_path %>
+        <% end %>
+      </label>
+    </div>
+  </div>
+
+  <div id="msg_block">
+    <div id="msg_createmsg">
+      <label class="msg_message_label"></label>
+      <div id="msg_options_border"></div>
+      <div id="msg_panel">
+        <form id="msg_form">
+          Title:<br/><input id="msg_input_title" type="text" name="title"><br/>
+          Message:<br/><textarea id="msg_input_idea" name="idea" rows="8"></textarea><br/>
+          <div id="input_subblock">
+            <div id="input_subblock_left">
+              Tags (comma-separated):<br/><textarea type="textarea" id="msg_input_tags"  name="word" rows="2"></textarea><br/>
+            </div>
+            <div id="input_subblock_right">
+              Recurrence:<br/>
+              <div id="msg_input_recurrence">
+                <select id="msg_times">
+                  <option selected="selected" value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                time(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                every
+                <select id="msg_every" value="4">
+                  <option value="1">Day</option>
+                  <option value="2">Week</option>
+                  <option value="3">Month</option>
+                  <option value="4">Quarter</option>
+                  <option selected="selected" value="5">Year</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div>
+            <input id="msg_button" type="submit" value="Send">
+            <div id="msg_create_error">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="msg_showmsg">
+      <label class="msg_message_label"></label>
+      <div id="msg_options_border"></div>
+      <div id="msgs_hider">
+      </div>
+
+    </div>
+
+    <div id="msg_panel_right">
+      <form id="msg_search">
+        <input id="msg_search_field" placeholder="Search">
+        <button id="msg_search_button">Go</button>
+      </form>
+      <button id="msg_new" class="msg_side_button">New</button>
+      <button id="msg_all" class="msg_side_button">Show All</button>
+      <div id="msg_tagms_box">
+        <div id="msg_tagms_title">
+          Message Tags
+        </div>
+        <div id="msg_tagms_tags">
+
+        </div>
+      </div>
+    </div>
+    <div style="clear:both"/>
+  </div>
+
+</body>
+

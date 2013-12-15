@@ -1,0 +1,35 @@
+
+<body id="sign_body">
+  <div id="sign_navbar">
+    <div id="sign_logo">
+      <a href="/"<label id="sign_logo_label">me-<span>2</span>-me</label></a>
+    </div>
+    <div class="navbar_right_option">
+      <a id="navbar_right_option_sign" href="/sessions/new">Sign In</a>
+    </div>
+  </div>
+  <div id="sign_errors">
+    <%= flash[:errors] if flash[:errors]%>
+  </div>
+  <div id="sign_block">
+    <div id="signup_message">
+      <label id="signup_message_label">Create a new me-2-me account</label>
+    </div>
+    <div id="sign_options_border"></div>
+    <%= form_for @user do |f| %>
+      <%= f.label :first_name %>
+      <%= f.text_field :fname %>
+      <%= f.label :last_Name %>
+      <%= f.text_field :lname %>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</body>
+
+

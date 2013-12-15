@@ -1,0 +1,28 @@
+
+<body id="sign_body">
+  <div id="sign_navbar">
+    <div id="sign_logo">
+      <a href="/"<label id="sign_logo_label">me-<span>2</span>-me</label></a>
+    </div>
+    <div class="navbar_right_option">
+      <a id="navbar_right_option_sign" href="/users/new">Sign Up</a>
+    </div>
+  </div>
+  <div id="sign_errors">
+    <%= flash[:errors] if flash[:errors]%>
+  </div>
+
+  <div id="sign_block">
+    <div id="signup_message">
+      <label id="signup_message_label">Sign in to your account</label>
+    </div>
+    <div id="sign_options_border"></div>
+    <form id="signin_form" method="post" action="/sessions">
+      Email:<br/><input class="signin_input" type="text" name="email"><br/>
+      Password:<br/><input class="signin_input" type="password" name="password"><br/>
+      <input id="signin_button" type="submit">
+    </form>
+  </div>
+
+</body>
+

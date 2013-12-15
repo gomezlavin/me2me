@@ -1,0 +1,137 @@
+#sign_body{
+  background-color: #E3E3ED;
+}
+
+#sign_navbar{
+  background-color: #28282A;
+  height: 70px;
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 0px;
+  box-shadow:1px 1px 10px 2px grey;
+}
+
+#sign_logo{
+  float: left;
+  height: 70px;
+  width: 250px;
+  padding-top: 5px;
+}
+
+#sign_logo_label{
+  font-size: 50px;
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.navbar_right_option{
+  float: right;
+  height: 45px;
+  width: 250px;
+  text-align: right;
+  padding-right: 15px;
+  padding-top: 25px;
+  color: white;
+}
+
+#navbar_right_option_sign{
+  text-align: right;
+  color: #c0392b;
+  font-family: arial;
+  font-size: 15px;
+}
+
+#sign_errors{
+  width: 480px;
+  color: red;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: pink;
+}
+#sign_block{
+  background-color: white;
+  margin-top: 40px;
+  // height: 480px;
+  width: 378px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow:2px 1px 10px 2px grey;
+  border: 1px solid grey;
+  border-collapse: collapse;
+  border-spacing: 4px 4px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+#signup_message_label{
+  color: black;
+  font-size: 30px;
+}
+
+#sign_options_border{
+  background-color: grey;
+  height: 1px;
+  width: 375px;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+
+#user_fname,
+#user_lname,
+#user_email,
+#user_password,
+#user_password_confirmation{
+  font-size: 20px;
+  box-shadow: none;
+  height: 35px;
+  width: 370px;
+  margin-bottom: 10px;
+}
+
+input[name="commit"]{
+  height: 45px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 110px;
+  background-color: #c0392b;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[name="commit"]:focus{
+  background-color: #73221A;
+}
+
+.signin_input{
+  font-size: 20px;
+  box-shadow: none;
+  height: 35px;
+  width: 360px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#signin_button{
+  height: 45px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 110px;
+  background-color: #c0392b;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+}
+#signin_button:focus{
+    background-color: #73221A;
+}

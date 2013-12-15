@@ -37,7 +37,7 @@
     <type label="SET" length="1" sql="SET" quote=""/>
     <type label="Bit" length="0" sql="bit" quote=""/>
   </group>
-</datatypes><table x="396" y="125" name="Users">
+</datatypes><table x="396" y="125" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -66,13 +66,13 @@
 <part>id</part>
 </key>
 </table>
-<table x="159" y="65" name="Messages">
+<table x="159" y="65" name="messages">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
 <row name="user_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
-<default>NULL</default><relation table="Users" row="id" />
+<default>NULL</default><relation table="users" row="id" />
 </row>
 <row name="title" null="1" autoincrement="0">
 <datatype>VARCHAR</datatype>
@@ -102,13 +102,13 @@
 <part>id</part>
 </key>
 </table>
-<table x="672" y="402" name="Letters">
+<table x="672" y="402" name="letters">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
 <row name="user_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
-<default>NULL</default><relation table="Users" row="id" />
+<default>NULL</default><relation table="users" row="id" />
 </row>
 <row name="subject" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
@@ -129,7 +129,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="905" y="115" name="Quotes">
+<table x="905" y="115" name="quotes">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -152,17 +152,17 @@
 <part>id</part>
 </key>
 </table>
-<table x="148" y="447" name="MessageTags">
+<table x="148" y="447" name="message_tags">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
 <row name="message_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
-<default>NULL</default><relation table="Messages" row="id" />
+<default>NULL</default><relation table="messages" row="id" />
 </row>
 <row name="tag_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
-<default>NULL</default><relation table="Tags" row="id" />
+<default>NULL</default><relation table="tags" row="id" />
 </row>
 <row name="created_at" null="1" autoincrement="0">
 <datatype>SET</datatype>
@@ -174,11 +174,11 @@
 <part>id</part>
 </key>
 </table>
-<table x="388" y="485" name="Tags">
+<table x="388" y="485" name="tags">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
-<row name="tag" null="1" autoincrement="0">
+<row name="word" null="1" autoincrement="0">
 <datatype>VARCHAR</datatype>
 <default>NULL</default></row>
 <row name="created_at" null="1" autoincrement="0">
@@ -191,17 +191,17 @@
 <part>id</part>
 </key>
 </table>
-<table x="661" y="81" name="UserQuotes">
+<table x="661" y="81" name="user_quotes">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
 <row name="user_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
-<default>NULL</default><relation table="Users" row="id" />
+<default>NULL</default><relation table="users" row="id" />
 </row>
 <row name="quote_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
-<default>NULL</default><relation table="Quotes" row="id" />
+<default>NULL</default><relation table="quotes" row="id" />
 </row>
 <row name="delivery_date" null="1" autoincrement="0">
 <datatype>DATE</datatype>
