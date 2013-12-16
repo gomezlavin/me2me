@@ -42,24 +42,10 @@ Me2meDos::Application.configure do
     authentication:       "plain",
     address:              "smtp.mailgun.org",
     port:                 587,
-    domain:               "me-2-m2.mailgun.org",
+    domain:               ENV["MAILGUN_DOMAIN"],
     user_name:            ENV["MAILGUN_USERNAME"],
     password:             ENV["MAILGUN_PASSWORD"]
   }
-
-
-  # # SMTP Configuration gmail
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.perform_deliveries = true
-  # config.action_mailer.smtp_settings = {
-  #   address:                "smtp.gmail.com",
-  #   port:                   587,
-  #   domain:                 "me-2-me.com",
-  #   user_name:              ENV["GMAIL_USERNAME"],
-  #   password:               ENV["GMAIL_PASSWORD"],
-  #   authentication:         "plain",
-  #   enable_starttls_auto:   true
-  # }
 
   require 'development_mail_interceptor'
   ActionMailer::Base.register_interceptor(DevelopmentMailInterceptor) if  Rails.env.development?

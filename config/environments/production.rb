@@ -72,7 +72,7 @@ Me2meDos::Application.configure do
     authentication:       "plain",
     address:              "smtp.mailgun.org",
     port:                 587,
-    domain:               "me-2-m2.mailgun.org",
+    domain:               ENV["MAILGUN_DOMAIN"],
     user_name:            ENV["MAILGUN_USERNAME"],
     password:             ENV["MAILGUN_PASSWORD"]
   }
