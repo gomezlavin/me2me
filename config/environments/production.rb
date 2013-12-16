@@ -65,16 +65,16 @@ Me2meDos::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  # SMTP Configuration Mailgun
+  # SMTP Configuration
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
     authentication:       "plain",
-    address:              "smtp.mailgun.org",
+    address:              "oxmail.registrar-servers.com",
     port:                 587,
-    domain:               ENV["MAILGUN_DOMAIN"],
-    user_name:            ENV["MAILGUN_USERNAME"],
-    password:             ENV["MAILGUN_PASSWORD"]
+    domain:               ENV["SMTP_DOMAIN"],
+    user_name:            ENV["SMTP_USERNAME"],
+    password:             ENV["SMTP_PASSWORD"]
   }
 
 end
