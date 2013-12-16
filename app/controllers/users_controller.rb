@@ -14,10 +14,10 @@ class UsersController < ApplicationController
     @user = User.create(params[:user])
     if @user.errors.empty?
       sign_in(@user)
-      UserMailer.registration_confirmation(@user).deliver
+      EmailWorker.perform_async(@user.id)
       redirect_to user_path(@user.id)
     else
-      #flash[:errors] stores an array of errors in the application
+      # flash[:errors] stores an array of errors in the application
       flash[:errors] = @user.errors.full_messages
       render :new
     end

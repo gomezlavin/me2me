@@ -15,4 +15,4 @@ production:
   adapter: postgresql
   encoding: unicode
   database: me2meDos_prod
-  pool: 5
+  pool: 25

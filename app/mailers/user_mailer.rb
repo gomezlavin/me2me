@@ -1,6 +1,5 @@
 class UserMailer < ActionMailer::Base
   default from: "Me-2-Me <info@me-2-me.com>"
-  default name:
 
   def registration_confirmation(user)
     @user = user
