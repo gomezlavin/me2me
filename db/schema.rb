@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20131213011441) do
     t.integer  "user_id"
     t.string   "subject"
     t.text     "body"
-    t.date     "delivery_date"
+    t.datetime "delivery_date"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
@@ -33,9 +33,8 @@ ActiveRecord::Schema.define(:version => 20131213011441) do
     t.integer  "user_id"
     t.string   "title"
     t.text     "idea"
-    t.date     "delivery_date"
-    t.time     "delivery_time"
-    t.date     "last_sent"
+    t.datetime "delivery_date"
+    t.datetime "last_sent"
     t.integer  "times_sent"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
@@ -58,9 +57,8 @@ ActiveRecord::Schema.define(:version => 20131213011441) do
   create_table "user_quotes", :force => true do |t|
     t.integer  "user_id"
     t.integer  "quote_id"
-    t.date     "delivery_date"
-    t.time     "delivery_time"
-    t.date     "last_sent"
+    t.datetime "delivery_date"
+    t.datetime "last_sent"
     t.integer  "times_sent"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false

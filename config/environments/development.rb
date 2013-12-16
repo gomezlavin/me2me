@@ -14,7 +14,7 @@ Me2meDos::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -34,4 +34,34 @@ Me2meDos::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # SMTP Configuration Mailgun
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+    authentication:       "plain",
+    address:              "smtp.mailgun.org",
+    port:                 587,
+    domain:               "me-2-m2.mailgun.org",
+    user_name:            ENV["MAILGUN_USERNAME"],
+    password:             ENV["MAILGUN_PASSWORD"]
+  }
+
+
+  # # SMTP Configuration gmail
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.smtp_settings = {
+  #   address:                "smtp.gmail.com",
+  #   port:                   587,
+  #   domain:                 "me-2-me.com",
+  #   user_name:              ENV["GMAIL_USERNAME"],
+  #   password:               ENV["GMAIL_PASSWORD"],
+  #   authentication:         "plain",
+  #   enable_starttls_auto:   true
+  # }
+
+  require 'development_mail_interceptor'
+  ActionMailer::Base.register_interceptor(DevelopmentMailInterceptor) if  Rails.env.development?
+
 end

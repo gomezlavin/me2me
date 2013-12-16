@@ -1,5 +1,5 @@
 class Message < ActiveRecord::Base
-  attr_accessible :title, :idea, :delivery_date, :delivery_time, :last_sent, :times_sent
+  attr_accessible :title, :idea, :delivery_date, :last_sent, :times_sent
 
   belongs_to :user
   has_many :message_tags
@@ -30,13 +30,11 @@ class Message < ActiveRecord::Base
   def self.addMessage(params,current_user)
     all_tags = []
     date = getRandomDate()
-    time = getRandomTime()
     u = User.find_by_id(current_user.id)
     m = Message.create(
       title: params[:title],
       idea: params[:idea],
-      delivery_date: date,
-      delivery_time: time)
+      delivery_date: date)
 
     params[:tags].each do |f|
       t = Tag.create(word: f)
@@ -53,26 +51,25 @@ class Message < ActiveRecord::Base
     return all_tags
   end
 
-  # Define a random date within 180 days which has not been taken
+  # Define a random date and time within 180 days which has not been taken
   def self.getRandomDate()
     rand = [*1..180].sample
     date = Time.now + (rand*24*60*60)
-    date = date.strftime("%Y-%m-%d")
     while (Message.where(delivery_date: date) != [])
       rand = [*1..180].sample
       date = Time.now + (rand*24*60*60)
-      date = date.strftime("%Y-%m-%d")
     end
-    return date
-  end
-
-  # Define a random time of day between 10am and 6pm
-  def self.getRandomTime()
+    # Making sure to deliver between 10am and 6pm based on current time zone
+    date = date.change({hour: 0, min: 0 , sec: 0 })
+    time_difference = date.strftime("%H").to_i
+    if time_difference >= 0
+      date-=(time_difference*60*60)
+    else
+      date+=(time_difference*60*60)
+    end
     rand = [*1..28800].sample
-    time_ini = Time.now.change({hour: 10, min: 0 , sec: 0 })
-    time = time_ini + rand
-    time = time.strftime("%H:%M:%S")
-    return time
+    date = date + rand
+    return date
   end
 
   # Method that returns messages with a specific tag

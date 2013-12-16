@@ -4,7 +4,7 @@ class CreateLetters < ActiveRecord::Migration
       t.integer :user_id
       t.string :subject
       t.text :body
-      t.date :delivery_date
+      t.datetime :delivery_date
       t.timestamps
     end
   end
