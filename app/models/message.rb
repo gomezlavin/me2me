@@ -60,13 +60,7 @@ class Message < ActiveRecord::Base
       date = Time.now + (rand*24*60*60)
     end
     # Making sure to deliver between 10am and 6pm based on current time zone
-    date = date.change({hour: 0, min: 0 , sec: 0 })
-    time_difference = date.strftime("%H").to_i
-    if time_difference >= 0
-      date-=(time_difference*60*60)
-    else
-      date+=(time_difference*60*60)
-    end
+    date = date.change({hour: 10, min: 0 , sec: 0 })
     rand = [*1..28800].sample
     date = date + rand
     return date

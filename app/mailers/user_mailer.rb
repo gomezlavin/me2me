@@ -1,6 +1,7 @@
 class UserMailer < ActionMailer::Base
   default from: "Me-2-Me <info@me-2-me.com>"
 
+  # Sends mail to user confirming successful registration to Me-2-Me
   def registration_confirmation(user)
     @user = user
     @url  = 'http://me2me.herokuapp.com/sessions/new'
