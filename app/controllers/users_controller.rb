@@ -1,7 +1,16 @@
 class UsersController < ApplicationController
   skip_before_filter :authorize, only: [:index, :new, :create]
 
+  def index
+    if current_user
+      redirect_to user_path(current_user.id)
+    end
+  end
+
   def show
+    # unless params[:id] == current_user.id
+    #   redirect_to user_path(current_user.id)
+    # end
     @user = current_user
   end
 

@@ -5,7 +5,7 @@ module SessionsHelper
   end
 
   def sign_out()
-    cookies.delete(:remember_token)          #no necesitas pasar usuario, porque lo único que hace es borrar a cualquiera que esté metido
+    cookies.delete(:remember_token)
   end
 
   def current_user

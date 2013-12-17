@@ -14,6 +14,11 @@ gem 'sinatra', require: false
 gem 'slim'
 gem 'sidetiq'
 gem 'unicorn'
+gem 'pry'
+
+group :development do
+  gem 'letter_opener'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
