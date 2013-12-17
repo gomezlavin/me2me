@@ -10,9 +10,10 @@ gem 'ejs'
 gem 'rails-erd'
 gem 'sidekiq'
 gem 'rails_12factor'
-gem "sinatra", require: false
-gem "slim"
+gem 'sinatra', require: false
+gem 'slim'
 gem 'sidetiq'
+gem 'unicorn'
 
 # Gems used only for assets and not required
 # in production environments by default.

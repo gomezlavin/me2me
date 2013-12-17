@@ -1,4 +1,5 @@
 require "sidekiq/web"
+require 'sidetiq/web'
 
 Me2meDos::Application.routes.draw do
 
@@ -8,6 +9,7 @@ Me2meDos::Application.routes.draw do
   get "/logout" => "sessions#destroy"
   get "/users/current" => "users#current"
   mount Sidekiq::Web, at: "/sidekiq"
+
   resources :users
   resources :sessions
   resources :messages
