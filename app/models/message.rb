@@ -53,16 +53,17 @@ class Message < ActiveRecord::Base
 
   # Define a random date and time within 180 days which has not been taken
   def self.getRandomDate()
-    rand = [*1..180].sample
-    date = Time.now + (rand*24*60*60)
-    while (Message.where(delivery_date: date) != [])
-      rand = [*1..180].sample
-      date = Time.now + (rand*24*60*60)
-    end
-    # Making sure to deliver between 10am and 6pm based on current time zone
-    date = date.change({hour: 10, min: 0 , sec: 0 })
-    rand = [*1..28800].sample
-    date = date + rand
+    # rand = [*1..180].sample
+    # date = Time.now + (rand*24*60*60)
+    # while (Message.where(delivery_date: date) != [])
+    #   rand = [*1..180].sample
+    #   date = Time.now + (rand*24*60*60)
+    # end
+    # # Making sure to deliver between 10am and 6pm based on current time zone
+    # date = date.change({hour: 10, min: 0 , sec: 0 })
+    # rand = [*1..28800].sample
+    # date = date + rand
+    date = Time.now + (5*60)
     return date
   end
 
