@@ -8,9 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    # unless params[:id] == current_user.id
-    #   redirect_to user_path(current_user.id)
-    # end
+
     @user = current_user
   end
 
@@ -37,6 +35,11 @@ class UsersController < ApplicationController
   end
 
   def update
+  end
+
+  def not_found
+    @route = params[:missing_route]
+    # render :file => 'public/404.html', :status => :not_found, :layout => false
   end
 
   def edit
