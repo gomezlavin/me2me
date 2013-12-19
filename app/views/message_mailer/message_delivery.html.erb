@@ -2,10 +2,16 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <style>
+      email_separator{
+        background-color: blue;
+        height: 20px;
+      }
+    </style>
   </head>
   <body>
-    <p>Este es el mensaje:</p>
-    <p><%= @user.fname %></p>
-    <p><%= @message.idea %></p>
+    <p id="email_idea"><%= @message.idea %></p>
+    <div id="email_separator"></div>
+    <p id="email_signature">Me-2-Me: Start the dialogue with yourself.</p<
   </body>
 </html>

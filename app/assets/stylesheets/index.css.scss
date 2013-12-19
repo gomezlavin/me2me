@@ -245,5 +245,13 @@ img{
     color: grey;
 }
 
-
+#error_404 {
+    background-image: url("/assets/monster_me2me.png");
+    background-size: cover;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+}
 
