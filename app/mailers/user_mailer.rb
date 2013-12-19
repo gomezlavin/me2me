@@ -4,9 +4,8 @@ class UserMailer < ActionMailer::Base
   # Sends mail to user confirming successful registration to Me-2-Me
   def registration_confirmation(user)
     @user = user
-    @url  = 'http://me2me.herokuapp.com/sessions/new'
-    attachments["test.jpg"] = File.read("#{Rails.root}/app/assets/images/test.jpg")
-    #attachments.inline["test.jpg"] = File.read("#{Rails.root}/app/assets/images/test.jpg")
-    mail(to: user.email, subject: "Registered")
+    @url  = "http://www.me-2-me.com/sessions/new"
+    attachments["me2me.png"] = File.read("#{Rails.root}/app/assets/images/me2me.png")
+    mail(to: user.email, subject: "Welcome to me-2-me!")
   end
 end

@@ -4,14 +4,10 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to me-2-me.com!, <%= @user.fname %></h1>
-    <p>
-      You have successfully signed up to for an account,
-      your username is: <%= @user.email %>.<br/>
-    </p>
-    <p>
-      To login to the site, just follow this link: <%= @url %>.
-    </p>
+    <h4>Hello <%= @user.fname %>,</h4>
+    <p>You have successfully signed up to for an account with us.</p>
+    <p>Your username is: <%= @user.email %></p>
+    <p>To login to the site, just follow this link: <%= @url %></p>
     <p>Thanks for joining and have a great day!</p>
   </body>
 </html>
