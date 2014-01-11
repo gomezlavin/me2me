@@ -8,8 +8,7 @@ class MessagesWorker
 
   def perform()
     time_ini = Time.now
-    #time_end = Time.now + (15*60)
-    time_end = Time.now + (5*60)
+    time_end = Time.now + (15*60)
     m = Message.where(delivery_date: time_ini..time_end)
     m.each do |msg|
       u = User.find_by_id(msg.user_id)
