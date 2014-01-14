@@ -1,46 +1,48 @@
+// NEW USER CSS ==========
 #sign_body{
-  background-color: #E3E3ED;
+  background-color: #EEEEEE;
 }
 
 #sign_navbar{
   background-color: #28282A;
   height: 70px;
-  margin-top: -8px;
-  margin-left: -8px;
-  margin-right: -8px;
   margin-bottom: 0px;
-  box-shadow:1px 1px 10px 2px grey;
 }
 
 #sign_logo{
   float: left;
-  height: 70px;
   width: 250px;
-  padding-top: 5px;
+  margin-top: -18px;
+  margin-left: 15px;
 }
 
 #sign_logo_label{
   font-size: 50px;
   color: white;
-  margin-left: 10px;
   text-decoration: none;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 .navbar_right_option{
   float: right;
   height: 45px;
-  width: 250px;
+  width: 150px;
   text-align: right;
   padding-right: 15px;
-  padding-top: 25px;
+  padding-top: 18px;
   color: white;
 }
 
 #navbar_right_option_sign{
   text-align: right;
   color: #c0392b;
-  font-family: arial;
-  font-size: 15px;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#navbar_right_option_sign:hover{
+  color: white;
 }
 
 #sign_errors{
@@ -57,20 +59,24 @@
   width: 378px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow:2px 1px 10px 2px grey;
-  border: 1px solid grey;
+  box-shadow: 0px 1px 5px 0px grey;
   border-collapse: collapse;
   border-spacing: 4px 4px;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 50px;
   padding-right: 50px;
+  border-radius: 5px;
+}
 
+#signup_message{
+  margin-bottom: 10px;
 }
 
 #signup_message_label{
-  color: black;
-  font-size: 30px;
+  color: #28282A;
+  font-size: 23px;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 #sign_options_border{
@@ -104,10 +110,16 @@ input[name="commit"]{
   font-size: 17px;
   border: none;
   border-radius: 5px;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 input[name="commit"]:focus{
   background-color: #73221A;
+}
+
+#sign_block{
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 13px;
 }
 
 .signin_input{
@@ -130,6 +142,7 @@ input[name="commit"]:focus{
   font-size: 17px;
   border: none;
   border-radius: 5px;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 #signin_button:focus{
     background-color: #73221A;

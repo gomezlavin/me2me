@@ -8,8 +8,8 @@
   width: 900px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow:2px 1px 10px 2px grey;
-  border: 1px solid grey;
+  box-shadow: 0px 1px 5px 0px grey;
+  border-radius: 5px;
   border-collapse: collapse;
   border-spacing: 4px 4px;
   padding-top: 25px;
@@ -25,7 +25,8 @@
 
 .msg_message_label{
   color: black;
-  font-size: 30px;
+  font-size: 22px;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 #msg_options_border{
@@ -39,10 +40,13 @@
 
 #msg_panel{
   width: 900px;
+  margin-top: 10px;
 }
 
 #msg_form{
   float: left;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 14px;
 }
 
 #msg_input_title{
@@ -146,10 +150,11 @@
   color: white;
   margin-left:-65px;
   margin-right: -13px;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 .msg_side_button{
-  height: 25px;
+  height: 35px;
   width: 250px;
   margin-top: 10px;
   background-color: white;
@@ -157,6 +162,7 @@
   font-size: 15px;
   border: 1px solid grey;
   border-radius: 5px;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 .msg_side_button:hover{
@@ -176,11 +182,11 @@
 
 #msg_tagms_title{
   width: 250px;
-  height: 22px;
+  height: 35px;
   border-bottom: 1px solid grey;
   text-align: center;
   font-size: 15px;
-  font-family: "Lucida Sans";
+  font-family: 'Gloria Hallelujah', cursive;
   padding-top: 3px;
 }
 

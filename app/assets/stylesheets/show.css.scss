@@ -2,22 +2,23 @@
 #switch{
   float: left;
   height: 70px;
-  width: 326px;
-  margin-left: 225px;
+  width: 35%;
   padding-top: 45px;
+  padding-left: 180px;
   text-align: center;
   color: white;
   font-family: arial;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 #switch1{
   float: left;
-  width: 108px;
+  width: 200px;
   height: 36px;
-  background-color: #bf491f;
+  background-color: #d95a2b;
   box-shadow:0px 0px 2px 0.5px black;
   padding-top: 4px;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 #switch1:hover{
@@ -27,28 +28,15 @@
 
 #switch2{
   float: left;
-  width: 108px;
-  height: 36px;
-  background-color: #d95a2b;
-  box-shadow:0px 0px 2px 0.5px black;
-  padding-top: 4px;
-}
-
-#switch2:hover{
-  background-color: #6C2D16;
-  cursor: pointer;
-}
-
-#switch3{
-  float: left;
-  width: 108px;
+  width: 200px;
   height: 36px;
   background-color: #f27c38;
   box-shadow:0px 0px 2px 0.5px black;
   padding-top: 4px;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
-#switch3:hover{
+#switch2:hover{
   background-color: #6C2D16;
   cursor: pointer;
 }

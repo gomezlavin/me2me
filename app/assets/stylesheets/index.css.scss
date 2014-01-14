@@ -2,197 +2,136 @@
 // LANDING PAGE CSS
 // ****************************
 
-#main_bar{
-    height: 80px;
-    margin-top: -8px;
-    margin-left: 60px;
-    margin-right: 50px;
-    margin-bottom: 0px;
+// TOP DIV CSS ====================
+body {
+    margin: 0;
+}
+
+#main_top_div{
+    height: 110px;
 }
 
 #main_logo{
     float: left;
-    margin-top: 15px;
-    height: 60px;
-    width: 250px;
+    margin-top: -10px;
+    margin-left: 120px;
 }
 
 #main_logo_label{
-    font-size: 60px;
+    font-size: 75px;
     color: black;
-    margin-left: 10px;
-
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #4C4C58;
 }
+
 span{
     color: #c0392b;
 }
 
-#main_options{
-    float: left;
-    margin-top: 20px;
-    height: 45px;
-    width: 500px;
-    padding-top: 11px;
-}
-
-
-#main_options_list{
-    text-decoration: none;
-    list-style-type: none;
-    height: 20px;
-    width: 600px;
-    margin-left: 0px;
-    padding-left: 0px;
-    margin-bottom: 1px;
-    font-family: arial;
-    font-size: 15px;
-}
-
-
-.main_options_li{
-    display: inline;
-    margin-right: 25px;
-}
-
-#main_options_border{
-    background-color: #4C4C58;
-    height: 1px;
-    width: 490px;
-    margin-top: 0px;
-}
-
 #main_user{
     float: right;
-    height: 50px;
-    width: 200px;
-    margin-right: 20px;
-}
-
-
-#main_user_signin{
-    float: left;
-    height: 40px;
-    width: 100px;
-}
-
-#main_user_signup{
-    float: right;
-    height: 40px;
-    width: 100px;
+    width: 30%;
+    margin-right: 120px;
+    margin-top: 50px;
 }
 
 .user_sign_button{
-    height: 30px;
-    width: 90px;
-    margin-left: 5px;
+    height: 35px;
+    width: 110px;
     background-color: #c0392b;
     color: white;
-    font-size: 12px;
+    font-size: 15px;
     border: none;
     border-radius: 5px;
-    margin-top: -5px;
+    font-family: 'Gloria Hallelujah', cursive;
+    padding-bottom: 10px;
+    margin-left: 8px;
+    float: right;
 }
 .user_sign_button:focus{
     background-color: #73221A;
 }
 
+
+// FEATURES DIV CSS ====================
+#main_middle_container {
+    background-color: #EEEEEE;
+}
+
 #main_message{
     height: 60px;
-    margin-left: -8px;
-    margin-right: -8px;
     margin-top: 15px;
+    margin-bottom: 10px;
     text-align: center;
     font-size: 20px;
     padding-top: 30px;
 }
-#main_message_label{
+
+.main_message_label{
     margin-top: 0px;
-    font-size: 30px;
-    color:#4C4C58;
+    font-size: 25px;
+    color: grey;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
-#main_carrousel{
+#main_features{
     background-color: white;
-    width: 1114px;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
-    height: 370px;
+    height: 350px;
     box-shadow:4px 1px 15px 2px grey;
 }
 
-#main_carro_left{
-    background-color: #bf491f;
-    padding-top: 50px;
-    // height: 370px;
-    height: 320px;
-    width: 370px;
-    float: left;
-}
-
-#main_carro_center{
+#main_features_left{
     background-color: #d95a2b;
-    padding-top: 50px;
-    // height: 370px;
-    height: 320px;
-    width: 370px;
+    height: 350px;
+    width: 50%;
     float: left;
-    border-left: 2px solid white;
+    text-align: center;
 }
 
-#main_carro_right{
+#main_features_right{
     background-color: #f27c38;
-    padding-top: 50px;
-    // height: 370px;
-    height: 320px;
-    width: 370px;
-    border-left: 2px solid white;
-    float: left;
+    height: 350px;
+    width: 50%;
+    float: right;
+    text-align: center;
 }
 
-.main_carro_top{
-    width: 325px;
-    height: 120px;
-    padding-top: 40px;
-    padding-left: 90px;
+#img_left {
+    width: 200px;
+    height: 125px;
+    margin-top: 70px;
+    border-radius: 15px;
 }
 
-.main_carro_middle{
-    width: 425px;
-    height: 65px;
+#p_left {
+    font-size: 35px;
     color: white;
-    font-size: 30px;
-    font-family: arial;
-    padding-top: 10px;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
-#img1{
-    padding-left: 15px;
-}
-#img2{
-    padding-left: -25px;
-}
-#p1{
-    padding-left: 95px;
-}
-#p2{
-    padding-left: 95px;
-}
-#p3{
-    padding-left: 45px;
+#img_right {
+    width: 240px;
+    height: 125px;
+    margin-top: 70px;
 }
 
-img{
-    border-radius: 10px;
+#p_right {
+    font-size: 35px;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
 }
+
+
 
 #main_signup{
-    margin-left: -8px;
-    margin-right: -8px;
     margin-top: 10px;
     height: 65px;
-    padding-top: 30px;
-    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #main_signup_form{
@@ -224,8 +163,6 @@ img{
 }
 
 #main_info{
-    margin-left: -8px;
-    margin-right: -8px;
     height: 19px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -254,4 +191,6 @@ img{
     top:0px;
     left:0px;
 }
+
+
 
