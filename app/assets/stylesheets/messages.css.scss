@@ -86,7 +86,7 @@
 #msg_input_tags{
   font-size: 17px;
   box-shadow: none;
-  width: 265px;
+  width: 560px;
   margin-bottom: 10px;
   padding: 5px;
   border-radius: 3px;
@@ -106,6 +106,7 @@
   cursor: pointer;
   clear: both;
   float: left;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 #msg_panel_right{
@@ -196,13 +197,12 @@
   text-align: justify;
   color: #c0392b;
   font-size: 13px;
-  font-family: "Lucida Sans";
 }
 
 a.msg_tags_class{
   color: #c0392b;
   font-size: 12px;
-  font-family: "Lucida Sans";
+  font-family: 'Gloria Hallelujah', cursive;
   text-decoration: none;
 }
 

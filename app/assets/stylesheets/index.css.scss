@@ -75,7 +75,7 @@ span{
 }
 
 #main_features{
-    background-color: white;
+    background-color: #d95a2b;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -84,7 +84,7 @@ span{
     box-shadow:4px 1px 15px 2px grey;
 }
 
-#main_features_left{
+#main_features_left_front{
     background-color: #d95a2b;
     height: 350px;
     width: 50%;
@@ -92,12 +92,28 @@ span{
     text-align: center;
 }
 
-#main_features_right{
+#main_features_left_back{
+    background-color: #f27c38;
+    height: 350px;
+    width: 50%;
+    float: left;
+    display: none;
+}
+
+#main_features_right_front{
     background-color: #f27c38;
     height: 350px;
     width: 50%;
     float: right;
     text-align: center;
+}
+
+#main_features_right_back{
+    background-color: #d95a2b;
+    height: 350px;
+    width: 50%;
+    float: right;
+    display: none;
 }
 
 #img_left {
@@ -125,6 +141,18 @@ span{
     font-family: 'Gloria Hallelujah', cursive;
 }
 
+ul {
+    margin-right: 25px;
+}
+
+li {
+    color: white;
+    text-align: left;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 25px;
+}
 
 
 #main_signup{
@@ -192,5 +220,22 @@ span{
     left:0px;
 }
 
+.shrink {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
 
+.shrink:hover {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
 

@@ -23,6 +23,32 @@ var current_user;
 $(function() {
 
   // *******************************
+  // SPLASH PAGE JAVASCRIPT
+  // *******************************
+
+  $("#main_features_left_front").mouseenter(function() {
+    $("#main_features").css("background-color","#d95a2b");
+    $("#main_features_right_front").hide();
+    $("#main_features_right_back").fadeIn();
+  });
+
+  $("#main_features_left_front").mouseleave(function() {
+    $("#main_features_right_back").hide();
+    $("#main_features_right_front").fadeIn();
+  });
+
+  $("#main_features_right_front").mouseenter(function() {
+    $("#main_features").css("background-color","#f27c38");
+    $("#main_features_left_front").hide();
+    $("#main_features_left_back").fadeIn();
+  });
+
+  $("#main_features_right_front").mouseleave(function() {
+    $("#main_features_left_back").hide();
+    $("#main_features_left_front").fadeIn();
+  });
+
+  // *******************************
   // INITIALIZING APP FOR USER
   // *******************************
   start();
@@ -33,16 +59,18 @@ $(function() {
 
   // Display the messages div block
   $("#switch1").on("click", function() {
-    $("#msg_block").show();
     $("#ltr_block").hide();
-    $("#quote_block").hide();
+    $("#msg_block").fadeIn();
+    $("#msg_createmsg").show();
+    $("#msg_showmsg").hide();
+    $(".msg_message_label").text("Inspire your future self with a message");
   });
 
   // Show the form to create a new message
   $("#msg_new").on("click", function(event) {
     $("#msg_createmsg").show();
     $("#msg_showmsg").hide();
-    $(".msg_message_label").text("Write a message or thought for your future self");
+    $(".msg_message_label").text("Write down a new message to yourself");
   });
 
   // Event where user creates a new message
@@ -76,20 +104,19 @@ $(function() {
   // Display the letters div block
   $("#switch2").on("click", function() {
     $("#msg_block").hide();
-    $("#ltr_block").show();
-    $("#quote_block").hide();
+    $("#ltr_block").fadeIn();
+    $(".msg_message_label").text("Write a letter to your future self");
   });
 
+  // Show the form to create a new letter
+  $("#letter_new").on("click", function(event) {
 
-  // *******************************
-  // QUOTE-RELATED EVENTS
-  // *******************************
+  });
 
-  // Display the quotes div block
-  $("#switch3").on("click", function() {
-    $("#msg_block").hide();
-    $("#ltr_block").hide();
-    $("#quote_block").show();
+  // Event where user creates a new message
+  $("#letter_button").on("click", function(event) {
+    event.preventDefault();
+
   });
 
 });

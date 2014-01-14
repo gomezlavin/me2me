@@ -2,3 +2,68 @@
 // LETTER-RELATED CSS
 // ****************************
 
+.date_input {
+  background-color: #f27c38;
+  color: white;
+  font-size: 20px;
+  font-family: 'Gloria Hallelujah', cursive;
+  width: 182px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+#letter_subject{
+  font-size: 17px;
+  box-shadow: none;
+  height: 30px;
+  width: 560px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+  border: none;
+  border: 1px solid grey;
+}
+
+#letter_body {
+  font-size: 17px;
+  box-shadow: none;
+  width: 560px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 3px;
+  border: none;
+  border: 1px solid grey;
+}
+
+#letter_button{
+  height: 45px;
+  width: 150px;
+  margin-top: 10px;
+  background-color: #c0392b;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  clear: both;
+  float: left;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+#letter_create_error{
+  font-size: 14px;
+  background-color: #F9EBEA;
+  color: #c0392b;
+  font-family: "Lucida Sans";
+  float: left;
+  margin-top: 20px;
+  margin-left: 70px;
+}
+
+
+
+
+
+
