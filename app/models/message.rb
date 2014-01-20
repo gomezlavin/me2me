@@ -29,8 +29,8 @@ class Message < ActiveRecord::Base
   # Returns users' tags
   def self.addMessage(params,current_user)
     all_tags = []
-    date = getRandomDate()
     u = User.find_by_id(current_user.id)
+    date = getRandomDate(u.messages.count)
     m = Message.create(
       title: params[:title],
       idea: params[:idea],
@@ -52,11 +52,15 @@ class Message < ActiveRecord::Base
   end
 
   # Define a random date and time within 180 days which has not been taken
-  def self.getRandomDate()
-    rand = [*1..180].sample
+  def self.getRandomDate(messages_count)
+    rand = [*1..180].sample if(messages_count<180)
+    rand = [*180..360].sample if(messages_count>=180&&messages_count<360)
+    rand = [*360..540].sample if(messages_count>=360)
     date = Time.now + (rand*24*60*60)
     while (Message.where(delivery_date: date) != [])
-      rand = [*1..180].sample
+      rand = [*1..180].sample if(messages_count<180)
+      rand = [*180..360].sample if(messages_count>=180&&messages_count<360)
+      rand = [*360..540].sample if(messages_count>=360)
       date = Time.now + (rand*24*60*60)
     end
     # Making sure to deliver between 10am and 6pm based on current time zone

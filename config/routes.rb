@@ -13,6 +13,7 @@ Me2meDos::Application.routes.draw do
   resources :users
   resources :sessions
   resources :messages
+  resources :letters
 
   match "/*missing_route" => "users#not_found"
 end

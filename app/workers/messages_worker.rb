@@ -14,7 +14,7 @@ class MessagesWorker
       u = User.find_by_id(msg.user_id)
       MessageMailer.message_delivery(u,msg).deliver
       msg.last_sent = msg.delivery_date
-      msg.delivery_date = Message.getRandomDate()
+      msg.delivery_date = Message.getRandomDate(u.messages.count)
       msg.times_sent == nil ? msg.times_sent = 1 : msg.times_sent += 1
       msg.save!
     end

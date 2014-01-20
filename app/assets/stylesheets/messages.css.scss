@@ -29,15 +29,6 @@
   font-family: 'Gloria Hallelujah', cursive;
 }
 
-#msg_options_border{
-  background-color: grey;
-  height: 1px;
-  width: 572px;
-  margin-top: 10px;
-  margin-left: 0px;
-  margin-bottom: 20px;
-}
-
 #msg_panel{
   width: 900px;
   margin-top: 10px;
@@ -245,31 +236,29 @@ a.msg_tags_class:hover{
 }
 
 .msg_container_title{
-  background-color: #E3E3ED;
+  background-color: #F1C2B1;
   font-size: 14px;
   width: 552px;
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 10px;
   padding-right: 10px;
-  border-top: 1px solid grey;
   font-family: "Lucida Sans";
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
 .msg_container_text{
-  background-color: #E3E3ED;
+  background-color: #EAAC95;
   font-size: 16px;
   width: 552px;
   padding: 10px;
-  border-top: 1px solid grey;
   font-family: "Lucida Sans";
 }
 
 .msg_container_options{
-  background-color:   #88888E;
-  color: white;
+  background-color: #d95a2b;
+  color: black;
   padding-left: 10px;
   padding-top: 3px;
   font-family: "Lucida Sans";
@@ -307,3 +296,19 @@ a.msg_tags_class:hover{
   margin-top: 20px;
   margin-left: 70px;
 }
+
+#msgs_empty {
+  font-size: 17px;
+  background-color: #F9EBEA;
+  color: #c0392b;
+  font-family: 'Gloria Hallelujah', cursive;
+  padding: 10px 10px;
+  margin-top: 25px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.msg_container_options span{
+  color: white;
+}
+

@@ -70,7 +70,7 @@ $(function() {
   $("#msg_new").on("click", function(event) {
     $("#msg_createmsg").show();
     $("#msg_showmsg").hide();
-    $(".msg_message_label").text("Write down a new message to yourself");
+    $(".msg_message_label").text("Inspire your future self with a message");
   });
 
   // Event where user creates a new message
@@ -105,19 +105,29 @@ $(function() {
   $("#switch2").on("click", function() {
     $("#msg_block").hide();
     $("#ltr_block").fadeIn();
-    $(".msg_message_label").text("Write a letter to your future self");
+    $("#ltr_createmsg").show();
+    $("#ltr_showmsg").hide();
+    $(".ltr_message_label").text("Write a letter to your future self");
   });
 
   // Show the form to create a new letter
-  $("#letter_new").on("click", function(event) {
-
+  $("#ltr_new").on("click", function(event) {
+    $("#ltr_createmsg").show();
+    $("#ltr_showmsg").hide();
+    $(".ltr_message_label").text("Write a letter to your future self");
   });
 
-  // Event where user creates a new message
-  $("#letter_button").on("click", function(event) {
+  // Event that displays all the user stored messages
+  $("#ltr_all").on("click", function(event) {
+    displayAllLetters();
+  });
+
+  // Event where user saves a new letter
+  $("#ltr_button").on("click", function(event) {
     event.preventDefault();
-
+    newLetter();
   });
+
 
 });
 

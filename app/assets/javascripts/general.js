@@ -29,10 +29,9 @@ var getCurrentUser = function(){
 // Display dashboard and call functions to retrieve users' information
 var start = function(){
   $("#ltr_block").hide();
-  $("#quote_block").hide();
   $("#msg_createmsg").show();
   $("#msg_showmsg").hide();
-  $(".msg_message_label").text("Write a message or thought for your future self");
+  $(".msg_message_label").text("Inspire your future self with a message");
   getCurrentUser();
 }
 

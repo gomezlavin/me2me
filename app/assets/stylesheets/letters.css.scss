@@ -2,18 +2,73 @@
 // LETTER-RELATED CSS
 // ****************************
 
-.date_input {
-  background-color: #f27c38;
-  color: white;
-  font-size: 20px;
-  font-family: 'Gloria Hallelujah', cursive;
-  width: 182px;
-  text-align: center;
-  margin-bottom: 15px;
-  margin-top: 5px;
+#ltr_panel_right{
+  margin-top: 65px;
+  float: right;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-#letter_subject{
+.ltr_side_button{
+  height: 35px;
+  width: 250px;
+  margin-top: 10px;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.ltr_side_button:hover{
+  cursor: pointer;
+  background-color: #c0392b;
+  color: white;
+}
+
+#ltr_createmsg{
+  float: left;
+  width: 580px;
+}
+
+.ltr_message_label {
+  display:inline-block;
+  color: black;
+  font-size: 22px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+#ltr_label_top {
+  display:inline-block;
+  color: black;
+  font-size: 22px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+#ltr_label_bottom {
+  display:inline-block;
+  color: black;
+  font-size: 22px;
+  font-family: 'Gloria Hallelujah', cursive;
+  padding-top: 30px;
+}
+
+#ltr_panel{
+  width: 900px;
+  margin-top: 10px;
+}
+
+#ltr_form{
+  float: left;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 14px;
+}
+
+#ltr_subject{
   font-size: 17px;
   box-shadow: none;
   height: 30px;
@@ -26,7 +81,7 @@
   border: 1px solid grey;
 }
 
-#letter_body {
+#ltr_body {
   font-size: 17px;
   box-shadow: none;
   width: 560px;
@@ -37,7 +92,23 @@
   border: 1px solid grey;
 }
 
-#letter_button{
+.ltr_date_input {
+  background-color: #f27c38;
+  color: white;
+  font-size: 20px;
+  font-family: 'Gloria Hallelujah', cursive;
+  width: 182px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding-left: 30px;
+}
+
+select {
+  padding: 20px;
+}
+
+#ltr_button{
   height: 45px;
   width: 150px;
   margin-top: 10px;
@@ -52,7 +123,7 @@
   font-family: 'Gloria Hallelujah', cursive;
 }
 
-#letter_create_error{
+#ltr_create_error{
   font-size: 14px;
   background-color: #F9EBEA;
   color: #c0392b;
@@ -62,7 +133,90 @@
   margin-left: 70px;
 }
 
+#ltr_showmsg{
+  float: left;
+  width: 580px;
+}
 
+#ltrs_empty_top {
+  font-size: 17px;
+  background-color: #F9EBEA;
+  color: #c0392b;
+  font-family: 'Gloria Hallelujah', cursive;
+  padding: 10px 10px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+#ltrs_empty_bottom {
+  font-size: 17px;
+  background-color: #F9EBEA;
+  color: #c0392b;
+  font-family: 'Gloria Hallelujah', cursive;
+  padding: 10px 10px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.ltr_container{
+  width: 572px;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.ltr_container_subject_archived{
+  background-color: #E3E3ED;
+  font-size: 16px;
+  width: 552px;
+  padding: 10px;
+  font-family: "Lucida Sans";
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ltr_container_options_archived{
+  background-color: #88888E;
+  color: black;
+  padding-left: 10px;
+  padding-top: 3px;
+  font-family: "Lucida Sans";
+  font-size: 11px;
+  height: 17px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.ltr_container_subject_due{
+  background-color: #f9b58f;
+  font-size: 16px;
+  width: 552px;
+  padding: 10px;
+  font-family: "Lucida Sans";
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ltr_container_options_due{
+  background-color: #f27c38;
+  color: black;
+  padding-left: 10px;
+  padding-top: 3px;
+  font-family: "Lucida Sans";
+  font-size: 11px;
+  height: 17px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.ltr_container_options_archived span,
+.ltr_container_options_due span{
+  color: white;
+}
 
 
 

@@ -64,6 +64,7 @@ var newMessage = function(){
 // Function to display all the users' stored messages
 var displayAllMessages = function(){
   $("#msg_createmsg").hide();
+  $("#msgs_empty").hide();
   $("#msg_showmsg").show();
   $(".msg_message_label").text("Stored messages");
   var url = "/messages/"+ current_user;
@@ -72,7 +73,11 @@ var displayAllMessages = function(){
     type: "get"
   }).done(function(data){
     $("#msgs_hider").empty();
-    parseMessages(data[0]);
+    if(data[0]=="") {
+      $("#msgs_empty").show();
+    } else {
+      parseMessages(data[0]);
+    }
   });
 }
 
@@ -80,6 +85,7 @@ var displayAllMessages = function(){
 // Function to display the messages for a selected tag
 var displayTagMessages = function(tag){
   $("#msg_createmsg").hide();
+  $("#msgs_empty").hide();
   $("#msg_showmsg").show();
   $("#msgs_hider").empty();
   $(".msg_message_label").text("Message tag: " + tag);
@@ -101,6 +107,7 @@ var searchMessages = function(){
 $(".msg_message_label").text("Search messages");
   $("#msgs_hider").empty();
   $("#msg_createmsg").hide();
+  $("#msgs_empty").hide();
   $("#msg_showmsg").show();
   var search = $("#msg_search_field").val();
   $("#msg_search_field").val("");
