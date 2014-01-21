@@ -42,14 +42,14 @@
   font-family: 'Gloria Hallelujah', cursive;
 }
 
-#ltr_label_top {
+#ltr_label_bottom {
   display:inline-block;
   color: black;
   font-size: 22px;
   font-family: 'Gloria Hallelujah', cursive;
 }
 
-#ltr_label_bottom {
+#ltr_label_top {
   display:inline-block;
   color: black;
   font-size: 22px;
@@ -179,6 +179,15 @@ select {
   border-top-right-radius: 5px;
 }
 
+.ltr_container_subject_archived:hover{
+  background-color: #f9b58f;
+  cursor: pointer;
+}
+
+.ltr_container a{
+  text-decoration: none;
+}
+
 .ltr_container_options_archived{
   background-color: #88888E;
   color: black;
@@ -218,6 +227,16 @@ select {
   color: white;
 }
 
+#ltr_displayLtr{
+  float: left;
+  width: 580px;
+}
 
+#ltr_label_display {
+  display:inline-block;
+  color: black;
+  font-size: 22px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
 
 

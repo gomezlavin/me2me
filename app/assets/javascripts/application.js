@@ -107,6 +107,7 @@ $(function() {
     $("#ltr_block").fadeIn();
     $("#ltr_createmsg").show();
     $("#ltr_showmsg").hide();
+    $("#ltr_displayLtr").hide();
     $(".ltr_message_label").text("Write a letter to your future self");
   });
 
@@ -114,6 +115,7 @@ $(function() {
   $("#ltr_new").on("click", function(event) {
     $("#ltr_createmsg").show();
     $("#ltr_showmsg").hide();
+    $("#ltr_displayLtr").hide();
     $(".ltr_message_label").text("Write a letter to your future self");
   });
 
@@ -128,6 +130,11 @@ $(function() {
     newLetter();
   });
 
+  // Display the selected archived letter
+  $("#ltrs_hider_top").on("click",".ltr_delegate", function(event) {
+    event.preventDefault();
+    displayArchivedLetter($(this).data("id"));
+  });
 
 });
 

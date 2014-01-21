@@ -27,4 +27,13 @@ class Letter < ActiveRecord::Base
     u.letters << l
   end
 
+  # Method that returns a specific letter from the DB
+  def self.returnArchivedLetter(params,current_user)
+    u = User.find_by_id(current_user.id)
+    return u.letters.find_by_id(params[:id].to_i)
+  end
+
 end
+
+
+

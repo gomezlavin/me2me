@@ -28,9 +28,20 @@ function parseDueLetters(data){
       var delivery_date = data[i]["delivery_date"].substr(0, data[i]["created_at"].length-10);
       content = JST['templates/DisplayDueLetters']({data: data[i], created_date: created_date, delivery_date: delivery_date});
       $("#ltrs_hider_bottom").append(content);
-      $("#ltrs_hider_bottom").attr("disabled", "disabled").off("click");
     }
   }
+}
+
+// ------------------------------------------------
+// Function to parse individual letter
+function parseIndividualLetter(data){
+  $("#ltrs_hider_display").empty();
+  $("#ltr_label_display").text("Subject:  " + data["subject"]);
+
+  var created_date = data["created_at"].substr(0, data["created_at"].length-10);
+  var delivery_date = data["delivery_date"].substr(0, data["created_at"].length-10);
+  content = JST['templates/DisplaySingleLetter']({body: data["body"], created_date: created_date, delivery_date: delivery_date});
+  $("#ltrs_hider_display").append(content);
 }
 
 // ------------------------------------------------
@@ -86,6 +97,7 @@ var newLetter = function(){
 var displayAllLetters = function(){
   $("#ltr_createmsg").hide();
   $("#ltr_showmsg").show();
+  $("#ltr_displayLtr").hide();
   $("#ltrs_empty_top").hide();
   $("#ltrs_empty_bottom").hide();
   $("#ltr_label_top").text("Archived letters");
@@ -101,7 +113,22 @@ var displayAllLetters = function(){
   });
 }
 
+// ------------------------------------------------
+// Function to display the selected archived letter
+var displayArchivedLetter = function(letter){
+  $("#ltr_createmsg").hide();
+  $("#ltr_showmsg").hide();
+  $("#ltr_displayLtr").show();
 
+  var url = "/letters/archived";
+  $.ajax({
+    url: url,
+    type: "get",
+    data: {id: letter}
+  }).done(function(data){
+    parseIndividualLetter(data);
+  });
+}
 
 
 

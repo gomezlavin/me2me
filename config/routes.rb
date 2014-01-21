@@ -6,6 +6,7 @@ Me2meDos::Application.routes.draw do
   root :to => "users#index"
   post "/messages/search" => "messages#search"
   post "/messages/tag" => "messages#tag"
+  get "/letters/archived" => "letters#archived"
   get "/logout" => "sessions#destroy"
   get "/users/current" => "users#current"
   mount Sidekiq::Web, at: "/sidekiq"

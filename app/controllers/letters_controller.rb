@@ -12,4 +12,10 @@ class LettersController < ApplicationController
     render json: ["Success!"]
   end
 
+  def archived
+    # Returns a specific letter from the user
+    data = Letter.returnArchivedLetter(params,current_user)
+    render json: data
+  end
+
 end

@@ -3,8 +3,7 @@ class MessagesWorker
   include Sidetiq::Schedulable
 
   # The app will check every 15 minutes for messages to be sent.
-  #recurrence { hourly.minute_of_hour(0, 15, 30, 45) }
-  recurrence { minutely(1) }
+  recurrence { hourly.minute_of_hour(0, 15, 30, 45) }
 
   def perform()
     time_ini = Time.now
